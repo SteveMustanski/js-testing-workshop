@@ -1,0 +1,23 @@
+{
+  "name": "js-testing-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteveMustanski/js-testing-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SteveMustanski/js-testing-workshop/issues"
+  },
+  "homepage": "https://github.com/SteveMustanski/js-testing-workshop#readme",
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}
