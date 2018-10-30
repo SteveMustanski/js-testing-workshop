@@ -8,13 +8,13 @@ describe('check for ship', () => {
     player = {
       ships: [
         {
-          locations: [[0,0], [0,1]]
+          locations: [[0, 0], [0, 1]]
         },
         {
-          locations: [[1,0], [1,1]]
+          locations: [[1, 0], [1, 1]]
         },
         {
-          locations: [[2,0], [2,1], [2,2], [2,3]]
+          locations: [[2, 0], [2, 1], [2, 2], [2, 3]]
         }
       ]
     }
@@ -46,20 +46,20 @@ describe('check for ship', () => {
   });
 });
 
-describe('damageShip', ( ) => {
+describe('damageShip', () => {
   const damageShip = require('../game_logic/ship_methods').damageShip;
 
   it('should register damage on a given ship at a given location', () => {
     let ship = {
-      locations: [[0,0]],
+      locations: [[0, 0]],
       damage: []
     };
 
-    damageShip(ship, [0,0]);
+    damageShip(ship, [0, 0]);
 
     expect(ship.damage).to.not.be.empty;
-    expect(ship.damage[0]).to.deep.equal([0,0]);
-    
+    expect(ship.damage[0]).to.deep.equal([0, 0]);
+
   });
 });
 
@@ -70,22 +70,31 @@ describe('fire', () => {
     player = {
       ships: [
         {
-        locations: [[0,0]],
-        damage: []
+          locations: [[0, 0]],
+          damage: []
         }
       ]
     };
   });
 
+  // added for examples
+  after(function() {
+    console.log('entire fire test suite completed')
+  });
+
+  afterEach(function () {
+    console.log('one unit test completed')
+  });
+
   it('should record damage on the given players ship at the given coordinate', () => {
 
-      fire(player, [0,0]);
-      expect(player.ships[0].damage[0]).to.deep.equal([0,0]);
+    fire(player, [0, 0]);
+    expect(player.ships[0].damage[0]).to.deep.equal([0, 0]);
   })
 
   it('should not record damage if there is not a ship at coordinate', () => {
 
-    fire(player, [9,9]);
+    fire(player, [9, 9]);
     expect(player.ships[0].damage).to.be.empty;
-})
+  })
 })
