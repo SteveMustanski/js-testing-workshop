@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
 
-
+// take a string and return title case
 function titleCase (title) {
   let words = title.split(' ');
   let titleCaseWords = words.map((word) => {
